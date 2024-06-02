@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuario</title>
+</head>
+
+<body>
+    <h1>Lista de Usuario</h1>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task.task }} - Senha: {{ task.senha }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index_route') }}">Adicionar Novo Usuario</a>
+</body>
+
+</html>
